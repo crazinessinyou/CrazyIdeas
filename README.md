@@ -1,0 +1,2 @@
+# CrazyIdeas
+CrazyIdeas website.
