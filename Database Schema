@@ -1,0 +1,87 @@
+Database Schema
+===============
+
+Collections
+-----------
+
+Ideas
+-----
+IdeaId auto generated
+unixTimeStamp
+userId
+tagIdArray
+Text
+Images[id and url,,,,,,]
+videos[id and url,,,,,,]
+link[id and url,,,,,,,,]
+SharedCount
+challenges:[challengeId]
+isActive
+triedIt:
+	[userId, Experience]
+Likes:
+	[userId]
+Comments: [
+		{
+			userId
+			message
+			unixTimeStamp
+		}
+	]
+
+
+
+Tags
+----
+tagId
+tagName
+ideaId
+
+Challenges
+----------
+challengeId:{
+	ideaId:
+	from:
+	to:
+	message
+	unixTimeStamp:
+	dueDate:
+}
+
+
+User
+----
+username:
+encryptedPassword:
+userId:
+challenges:{
+	todo:[challengeId]
+	challengesCompleted:[challengeId]
+	challengedOtherPeople:[challengeId]
+}
+Tried:[ideaId]
+ideas:[ideaId]
+bookmark:[ideaId]
+Country
+State
+DOB
+Fb-Id
+G+-Id
+TwitterId
+isActive
+
+
+
+
+
+crazyIdeas.com/viewPost?postId=123
+
+hdajkhkjshdakfhaskhfklshdklfhskl
+alsfjashkfhaskhfkshkfhaslkdhklashkfl
+[IMAGE id=123108241]
+[LINK id=12313421342]
+[VIDEO id=1231231231]
+fsfkjhsakhfkashfkjd
+
+
+
