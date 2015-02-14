@@ -1,0 +1,48 @@
+<%
+var title = "";
+var text = "";
+var mediaSrc = "";
+console.log(post);
+console.log(post.thumbnailMetadata);
+
+if(post.thumbnailMetadata) {
+	if(post.thumbnailMetadata.hasOwnProperty('title')) {
+		title = post.thumbnailMetadata.title;
+	}
+	if(post.thumbnailMetadata.hasOwnProperty('text')) {
+		text = post.thumbnailMetadata.text;
+	}
+	if(post.thumbnailMetadata.hasOwnProperty('mediaSrc')) {
+		mediaSrc = post.thumbnailMetadata.mediaSrc;
+	}
+}
+var date = post.date;
+var likes = post.likes;
+var comments = post.comments;
+if(!date) { date = ""; }
+if(!likes) { likes = ""; }
+if(!comments) { comments = ""; }
+%>
+
+<div class="post format-video box"> 
+<div class="video frame">
+<iframe width="415" height="315"
+src="http://www.youtube.com/embed/f7p-ZirYVYY">
+</iframe>
+<!-- 
+<video width="480" height="270" controls="controls" style="color:green;">
+  <source src=<%= mediaSrc %> type="video/mp4">
+</video>
+ -->
+</div>
+	<!-- <div class="video frame"><iframe src=<%= mediaSrc %> width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div> -->
+	<h2 class="title"><a href="post.html"><%= title  %></a></h2>
+	<p><%= text  %></p>
+
+	<div class="details">
+		<span class="icon-video"><a href="#"><%= date  %></a></span>
+		<span class="likes"><a href="#" class="likeThis"><%= likes  %></a></span>
+		<span class="comments"><a href="#"><%= comments  %></a></span>
+	</div>
+	
+</div>
