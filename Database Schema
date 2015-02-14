@@ -28,6 +28,15 @@ Comments: [
 			unixTimeStamp
 		}
 	]
+thumbnail:{
+	thumbnailtype: ,
+	thumbnailMetadata: { 
+		mediaSrc :
+		Heading :
+ 		text :
+	}
+}
+
 
 
 
