@@ -1,0 +1,46 @@
+<%
+var title = "";
+var text = "";
+console.log(post.thumbnailMetadata);
+
+
+if(post.thumbnailMetadata) {
+	if(post.thumbnailMetadata.hasOwnProperty('title')) {
+		console.log("title");
+		title = post.thumbnailMetadata.title;
+	}
+	if(post.thumbnailMetadata.hasOwnProperty('text')) {
+		text = post.thumbnailMetadata.text;
+	}
+}
+var date = post.date;
+var tried = post.tried;
+var challenge = post.challenge;
+var likes = post.likes;
+var comments = post.comments;
+if(!date) { date = ""; }
+if(!likes) { likes = ""; }
+if(!comments) { comments = ""; }
+if(!tried) { tried = ""; }
+if(!challenge) { challenge = ""; }
+
+console.log(title);
+console.log(text);
+console.log(date);
+console.log(likes);
+console.log(comments);
+
+
+%>
+
+<div class="post format-text box"> 	
+	<h2 class="title"><a href="post.html"><%= title  %></a></h2>
+	<p><%= text  %></p>
+	<div class="details">
+		<span class="icon-image"><a href="#"><%= date  %></a></span>
+		<span class="tried"><a href="#" class="tried"><%= tried  %></a></span>
+		<span class="challenge"><a href="#" class="challenge"><%= challenge  %></a></span>
+		<span class="likes"><a href="#" class="likeThis"><%= likes  %></a></span>
+		<span class="comments"><a href="#" class="comments"><%= comments  %></a></span>
+	</div>
+</div>
